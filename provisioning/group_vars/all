@@ -4,4 +4,4 @@
 # Set remi repository: remi-php55, remi-php56 or remi-php70
 php_remi_repo: remi-php70
 
-php_date_timezone: Asia/Tokyo
+php_date_timezone: UTC
