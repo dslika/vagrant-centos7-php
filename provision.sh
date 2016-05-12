@@ -6,9 +6,15 @@
 #   @link    https://github.com/progre/template-vagrant/blob/master/provision.sh
 #   @license MIT, Copyright (c) 2015 PROGRE <https://github.com/progre/template-vagrant/blob/master/LICENSE>
 
-if ! [ `which ansible` ]; then
-    yum install -y epel-release
-    yum install -y ansible
-fi
+# if ! [ `which ansible` ]; then
+#     yum install -y epel-release
+#     yum install -y ansible
+# fi
 
-ansible-playbook -vv -i /vagrant/provisioning/hosts /vagrant/provisioning/site.yml
+# ansible-playbook -vv -i /vagrant/provisioning/hosts /vagrant/provisioning/site.yml
+
+cd /var/www/daim
+npm install
+bundle install --path vendor/bundle --binstubs vendor/bundle/bin
+composer install
+
